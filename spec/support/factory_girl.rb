@@ -22,5 +22,4 @@ FactoryGirl.define do
     power 1
     toughness 1
   end
-
 end
