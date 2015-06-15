@@ -8,9 +8,11 @@ class AddCards < ActiveRecord::Migration
       t.string :main_type, null: false, length: {maximum: 15}
       t.string :sub_type, length: {maximum: 15}
       t.string :rules_text
-      t.string :flavor_text, length: {maximum: 50}
+      t.string :flavor_text, length: {maximum: 100}
       t.integer :power, numericality: {only_integer: true}
       t.integer :toughness, numericality: {only_integer: true}
+      t.string :extra_rules
+      t.integer :expansion_id, null:false
     end
   end
 end

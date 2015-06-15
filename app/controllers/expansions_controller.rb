@@ -5,6 +5,7 @@ class ExpansionsController < ApplicationController
 
   def show 
     @expansion = Expansion.find(params[:id])
+    @cards = Card.where(expansion_id: @expansion.id)
   end
 
   def new
