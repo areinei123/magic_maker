@@ -8,8 +8,9 @@ FactoryGirl.define do
   end
 
   factory :expansion do
-    sequence(:name) {|n| "The #{n}th expansion"}
+    sequence(:set_name) {|n| "The #{n}th expansion"}
     set_size 255
+    set_desc "Its a bunch of cards"
   end
 
   factory :card do
