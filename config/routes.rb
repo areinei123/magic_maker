@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'expansions#index'
   devise_for :users
-  resources :expansions, only: [:index]
+  resources :expansions, only: [:index, :show]
 end

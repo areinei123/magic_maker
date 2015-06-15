@@ -3,6 +3,6 @@
 
 <p>These are all the current expansions</p>
 <ul><% @expansions.each do |expansion| %>
-  <li><%= expansion.set_name %></li>
+  <li><%= link_to expansion.set_name, expansion_path(expansion) %></li>
 <% end %></ul>
 </div>
