@@ -1,0 +1,18 @@
+<div class='row'>
+  <%= form_for @expansion do |f| %>
+    <% if @expansion.errors.any? %>
+      <ul>
+        <% @expansion.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <%-end-%>
+      </ul>
+    <%-end-%>
+    <%= f.label :set_name %>
+    <%= f.text_field :set_name, placeholder: "Enter the name here" %>
+    <%= f.label :set_size %>
+    <%= f.text_field :set_size, placeholder: "Set size, numbers only" %>
+    <%= f.label :set_desc, "Set description" %>
+    <%= f.text_area :set_desc, placeholder: "Enter the set description here" %>
+    <%= f.submit "Finished", class: "button radius" %>
+  <%-end-%>
+</div>

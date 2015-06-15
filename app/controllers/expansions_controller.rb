@@ -22,6 +22,20 @@ class ExpansionsController < ApplicationController
     end
   end
 
+  def edit
+    @expansion = Expansion.find(params[:id])
+  end
+
+  def update
+    @expansion = Expansion.find(params[:id])
+    if @expansion.update(expansion_params)
+      redirect_to @expansion
+    else
+      flash[:notice] = @expansion.errors.full_messages.join("! ")
+      render :edit
+    end
+  end
+
   private
   def expansion_params
     params.require(:expansion).permit(:set_name, :set_size, :set_desc)
