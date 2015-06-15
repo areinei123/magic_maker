@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150611183719) do
     t.integer "toughness"
   end
 
-  create_table "expansion", force: :cascade do |t|
+  create_table "expansions", force: :cascade do |t|
     t.string  "set_name",              null: false
     t.integer "set_size",              null: false
     t.string  "set_desc", default: ""
