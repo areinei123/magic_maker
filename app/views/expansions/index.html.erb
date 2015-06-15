@@ -1,0 +1,8 @@
+<div class="row">
+<h2>MTG Card Creator</h2>
+
+<p>These are all the current expansions</p>
+<ul><% @expansions.each do |expansion| %>
+  <li><%= expansion.set_name %></li>
+<% end %></ul>
+</div>

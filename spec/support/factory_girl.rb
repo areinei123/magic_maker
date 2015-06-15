@@ -8,11 +8,12 @@ FactoryGirl.define do
   end
 
   factory :expansion do
-    sequence(:name) {|n| "The #{n}th expansion"}
+    sequence(:set_name) {|n| "The #{n}th expansion"}
     set_size 255
+    set_desc "Its a bunch of cards"
   end
 
-  factory :creature, class: Card do
+  factory :card do
     sequence(:name) {|n| "Wood Elf #{n}"}
     mana_cost "G"
     main_type "Creature"
