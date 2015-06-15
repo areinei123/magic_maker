@@ -12,7 +12,7 @@ FactoryGirl.define do
     set_size 255
   end
 
-  factory :creature, class: Card do
+  factory :card do
     sequence(:name) {|n| "Wood Elf #{n}"}
     mana_cost "G"
     main_type "Creature"
