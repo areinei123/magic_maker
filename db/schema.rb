@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150611183719) do
     t.integer "power"
     t.integer "toughness"
     t.string  "extra_rules"
+    t.string  "image"
     t.integer "expansion_id", null: false
   end
 

@@ -1,0 +1,11 @@
+<div class='row'>
+  <h2><%= @card.name %></h2>
+
+  <p>Mana Cost: <%= @card.mana_cost %></p>
+  <p><%= @card.image %></p>
+  <p><%= @card.main_type %> <%= @card.sub_type unless @card.sub_type.empty? %></p>
+  <p><%= @card.rules_text %></p>
+  <p><%= @card.flavor_text %></p>
+  <p><%= @card.power %>/<%= @card.toughness %></p>
+  <p><%= @card.extra_rules %></p>
+</div>

@@ -12,6 +12,7 @@ class AddCards < ActiveRecord::Migration
       t.integer :power, numericality: {only_integer: true}
       t.integer :toughness, numericality: {only_integer: true}
       t.string :extra_rules
+      t.string :image
       t.integer :expansion_id, null:false
     end
   end
