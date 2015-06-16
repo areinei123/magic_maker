@@ -6,4 +6,6 @@ class Card < ActiveRecord::Base
   validates :main_type, presence: true, length: {maximum: 15}
   validates :sub_type, length: {maximum: 15}
   validates :flavor_text, length: {maximum: 100}
+
+  mount_uploader :image, CardImageUploader
 end
