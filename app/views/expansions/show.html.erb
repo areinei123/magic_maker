@@ -2,6 +2,7 @@
   <h2><%= @expansion.set_name %></h2>
   <p>This set contains  of <%=@expansion.set_size%></p>
   <p><%= link_to 'Update', edit_expansion_path(@expansion) %> this set here.</p>
+  <p><%= link_to 'Add a Card', new_expansion_card_path(@expansion), class: 'button tiny radius' %></p>
   <div class='small-3 columns'
     <ul>
       <% @cards.each do |card| %>
