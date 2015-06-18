@@ -5,9 +5,11 @@
     <%= f.text_field :image, placeholder: "Image link" %>
     <%= f.text_field :main_type, placeholder: "Legal Card Types Only" %>
     <%= f.text_field :sub_type, placeholder: "Sub Type for Creatures Only" %>
-    <%= f.text_area :rules_text, size: "40x20", placeholder: "Rules text, if extra space is needed, please use the extra rules space" %>
-    <%= f.text_area :flavor_text, size: "40x20", placeholder: "Flavor Text" %>
-    <%= f.text_area :extra_rules, size: "40x20", placeholder: "Extra Space for Rules Text" %>
+    <%= f.text_area :rules_text, size: "20x10", placeholder: "Rules text, if extra space is needed, please use the extra rules space" %>
+    <%= f.text_area :flavor_text, size: "20x10", placeholder: "Flavor Text" %>
+    <%= f.text_field :power, placeholder: "Creature Power" %>
+    <%= f.text_field :toughness, placeholder: "Creature Toughness" %>
+    <%= f.text_area :extra_rules, size: "20x10", placeholder: "Extra Space for Rules Text" %>
 
     <%= f.submit "Create", class: "button radius" %>
   <%-end-%>
