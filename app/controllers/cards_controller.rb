@@ -12,6 +12,7 @@ class CardsController < ApplicationController
     @expansion = Expansion.find(params[:expansion_id])
     @card = @expansion.cards.new(card_params)
     if @card.save
+      binding.pry
       flash[:notice] = "Ingredient Added."
       redirect_to expansion_path(@expansion)
     else

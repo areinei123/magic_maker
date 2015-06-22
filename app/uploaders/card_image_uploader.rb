@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class CardImageUploader < CarrierWave::Uploader::Base
   if Rails.env.production? || Rails.env.development?
     storage :fog

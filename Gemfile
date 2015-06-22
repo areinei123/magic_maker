@@ -10,10 +10,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'foundation-rails'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'fog'
 gem 'nokogiri'
-gem 'dotenv-rails'
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
