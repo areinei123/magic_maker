@@ -1,5 +1,6 @@
 <div class='row'>
   <h2><%= @card.name %></h2>
+  <p><%= link_to 'Update', edit_expansion_card_path(@card.expansion_id, @card), class: 'button radius' %>
 
   <p>Mana Cost: <%= @card.mana_cost %></p>
   <p><%= image_tag(@card.image) %></p>
