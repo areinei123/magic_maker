@@ -1,4 +1,4 @@
-<div class='row'>
+<div class='row expansion-wrapper'>
   <%= form_for @expansion do |f| %>
     <% if @expansion.errors.any? %>
       <ul>
@@ -12,7 +12,8 @@
     <%= f.label :set_size %>
     <%= f.text_field :set_size, placeholder: "Set size, numbers only" %>
     <%= f.label :set_desc, "Set description" %>
-    <%= f.text_area :set_desc, placeholder: "Enter the set description here" %>
+    <p>Use the description to describe keywords to save space in the rules text. </p>
+    <%= f.text_area :set_desc, size: "15x7", placeholder: "Enter the set description here" %>
     <%= f.submit "Create", class: "button radius" %>
   <%-end-%>
 </div>

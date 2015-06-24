@@ -1,8 +1,15 @@
 <div class='row'>
   <h2><%= @card.name %></h2>
-  <p><%= link_to 'Update', edit_expansion_card_path(@card.expansion_id, @card), class: 'button radius' %>
-
-  <p>Mana Cost: <%= @card.mana_cost %></p>
+  <p><%= link_to 'Update', edit_expansion_card_path(@card.expansion_id, @card), class: 'button radius tiny' %>
+  <%= link_to 'Back', expansion_path(@expansion), class: 'button radius tiny' %>
+  </p>
+  <p>Mana Cost: 
+    <span class="mana-costs" id="card-mana-<%=@card.id%>">
+      <% @card.mana_symbols.each do |mana| %>
+        <%= image_tag(mana) %>
+      <%-end-%>
+    </span>
+  </p>
   <p><%= image_tag(@card.image) %></p>
   <p><%= @card.main_type %> <%= @card.sub_type unless @card.sub_type.empty? %></p>
   <p><%= @card.rules_text %></p>

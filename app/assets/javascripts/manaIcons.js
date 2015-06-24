@@ -1,8 +1,8 @@
-// $(document).redy(function() {
-//   function manaSymbols() {
-//     $(".mana-costs").each(function() {
+$(document).redy(function() {
+  function manaSymbols() {
+    $(".mana-costs").each(function() {
       
-//     });
-//   }
-//   manaSymbols
-// });
+    });
+  }
+  manaSymbols
+});

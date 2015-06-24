@@ -1,15 +1,30 @@
-<div class='row'>
+<div class='row card-show-wrapper'>
   <%= form_for [@expansion, @card] do |f| %>
-    <%= f.text_field :name, placeholder: "Card Name" %>
-    <%= f.text_field :mana_cost, placeholder: "Mana Cost" %>
-    <%= f.text_field :main_type, placeholder: "Legal Card Types Only" %>
-    <%= f.text_field :sub_type, placeholder: "Sub Type for Creatures Only" %>
-    <%= f.text_area :rules_text, size: "20x10", placeholder: "Rules text, if extra space is needed, please use the extra rules space" %>
-    <%= f.text_area :flavor_text, size: "20x10", placeholder: "Flavor Text" %>
-    <%= f.text_field :power, placeholder: "Creature Power" %>
-    <%= f.text_field :toughness, placeholder: "Creature Toughness" %>
-    <%= f.text_area :extra_rules, size: "20x10", placeholder: "Extra Space for Rules Text" %>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :name, placeholder: "Card Name" %>
+    </div>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :mana_cost, placeholder: "Mana Cost" %>
+    </div>
+    <p>For mana costs, please format the desired symbols inside of curly braces with a space between each one. The mana symbol legend is as follows: <br>
+    {U}: Blue, {B}: Black, {R}: Red, {W}: White, {G}: Green, {X}: X mana, {1}: One mana, and so on.</p>
     <%= f.text_field :image, placeholder: "Image link" %>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :main_type, placeholder: "Legal Card Types Only" %>
+    </div>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :sub_type, placeholder: "Sub Type for Creatures Only" %>
+    </div>
+    <%= f.text_area :rules_text, size: "15x7", placeholder: "Rules text, if extra space is needed, please use the extra rules space" %>
+    <p>Please use {T} and {1} for tap symbols and mana in activation costs.</p>
+    <%= f.text_area :flavor_text, size: "15x7", placeholder: "Flavor Text" %>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :power, placeholder: "Creature Power" %>
+    </div>
+    <div class='small-6 column card-top'>
+      <%= f.text_field :toughness, placeholder: "Creature Toughness" %>
+    </div>
+    <%= f.text_area :extra_rules, size: "20x7", placeholder: "Extra Space for Rules Text" %>
 
     <%= f.submit "Create", class: "button radius" %>
   <%-end-%>
