@@ -1,23 +1,32 @@
 <div class='row'>
+  <div class='expansion-wrapper'>
   <h2><%= @expansion.set_name %></h2>
-  <p>This set contains  of <%=@expansion.set_size%></p>
-  <p><%= link_to 'Update', edit_expansion_path(@expansion) %> this set here.</p>
-  <p><%= link_to 'Add a Card', new_expansion_card_path(@expansion), class: 'button tiny radius' %></p>
-  <div class='small-3 columns'>
-    <ul>
-      <% @cards.each do |card| %>
-        <li>
-          <%= link_to card.name, expansion_card_path(@expansion, card) %>  <%= card.mana_cost %><br>
+    <p>This set contains <%= @expansion.card_count %> of <%= @expansion.set_size%> cards.</p>
+    <p><%= @expansion.set_desc %>
+    
+    <p><%= link_to 'Add a Card', new_expansion_card_path(@expansion), class: 'button radius' %>
+      <%= link_to 'Update', edit_expansion_path(@expansion),class: 'button tiny radius' %> this set here.</p>
+  </div>
+  <div class="large-12 columns card-index-wrapper">
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 card-list">
+    <% @cards.each do |card| %>
+      <li class="card-thumbnail-wrapper">
+        <div class="card-thumbnail">
+          <%= link_to card.name, expansion_card_path(@expansion, card) %><br>
+            <% card.mana_symbols.each do |mana| %>
+              <%= image_tag(mana) %>
+            <%-end-%><br>
           <%= card.main_type %> 
           <% unless card.sub_type.empty? %>
-            <%= card.sub_type %>
+            - <%= card.sub_type %>
           <%-end-%><br>
-          <%= card.rules_text %><br>
+          <%= truncate card.rules_text, length: 100 %><br>
           <% if card.main_type.include?("Creature") %>
             <%= card.power %>/<%= card.toughness %>
           <%-end-%>
-        </li>
-        <%-end-%>
-    </ul>
+        </div>
+      </li>
+    <%-end-%>
+  </ul>
   </div>
 </div>

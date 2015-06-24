@@ -1,8 +1,15 @@
-<div class="row">
-<h2>MTG Card Creator</h2>
-<p><%= link_to 'Click here', new_expansion_path %> to create a new set</p>
-<p>These are all the current expansions</p>
-<ul><% @expansions.each do |expansion| %>
-  <li><%= link_to expansion.set_name, expansion_path(expansion) %></li>
-<%-end-%></ul>
+<div class="row expansion-wrapper">
+  <% if current_user %>
+  <h2>MTG Card Creator</h2>
+  <p><%= link_to 'Click here', new_expansion_path %> to create a new set</p>
+  <p>These are all the current expansions</p>
+  <ul><% @expansions.each do |expansion| %>
+    <li>
+      <%= link_to expansion.set_name, expansion_path(expansion) %>
+      <%= expansion.card_count %>/<%= expansion.set_size %> cards
+    </li>
+  <%-end-%></ul>
+  <% else %>
+  <%= link_to "Sign up", new_user_registration_path, class: 'button large radius' %>
+  <%-end%>
 </div>

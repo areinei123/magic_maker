@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150623160207) do
     t.string  "extra_rules"
     t.string  "image"
     t.integer "expansion_id", null: false
+    t.integer "user_id"
   end
 
   create_table "expansions", force: :cascade do |t|

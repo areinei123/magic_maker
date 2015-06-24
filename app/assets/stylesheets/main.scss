@@ -1,0 +1,71 @@
+$opaque-white: rgba(186, 186, 186, 0.9);
+$opaque-gray: rgba( 57, 57, 57, 0.9);
+$fallback: #000;
+
+/* Main Styling */
+
+body {
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: image-url("background.jpg");
+  background-color: $fallback;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* Expansion Index Page */
+
+.expansion-wrapper {
+  background-color: $opaque-white;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+/* Expansion Show page */
+
+.card-index-wrapper {
+  background-color: $opaque-white;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.card-thumbnail-wrapper {
+  margin: 0 auto;
+  padding: none;
+}
+
+.card-thumbnail {
+  width: 100%;
+  height: 100%;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  text-align: center;
+  word-wrap: break-word;
+  color: #eee;
+  padding: .5rem;
+}
+
+.card-thumbnail:hover {
+  background-color: #262626;
+}
+
+/* Card Show Page */
+
+.card-show-wrapper {
+  background-color: $opaque-gray;
+  padding: 2rem;
+  color: #eee;
+}
+
+.card-top {
+  padding-top: 2rem;
+}
