@@ -12,10 +12,10 @@
   </p>
   <p><%= image_tag(@card.image) %></p>
   <p><%= @card.main_type %> <%= @card.sub_type unless @card.sub_type.empty? %></p>
-  <p><%= @card.rules_text %></p>
-  <p><%= @card.flavor_text %></p>
+  <p><%= simpleformat(@card.rules_text) %></p>
+  <p><%= simple_format(@card.flavor_text) %></p>
   <% if @card.main_type.include?("Creature") %>
   <p><%= @card.power %>/<%= @card.toughness %></p>
   <%-end-%>
-  <p><%= @card.extra_rules %></p>
+  <p><%= simple_format(@card.extra_rules) %></p>
 </div>

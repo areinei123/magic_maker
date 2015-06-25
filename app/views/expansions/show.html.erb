@@ -2,7 +2,7 @@
   <div class='expansion-wrapper'>
   <h2><%= @expansion.set_name %></h2>
     <p>This set contains <%= @expansion.card_count %> of <%= @expansion.set_size%> cards.</p>
-    <p><%= @expansion.set_desc %>
+    <p><%= simple_format(@expansion.set_desc) %>
     
     <p><%= link_to 'Add a Card', new_expansion_card_path(@expansion), class: 'button radius' %>
       <%= link_to 'Update', edit_expansion_path(@expansion),class: 'button tiny radius' %> this set here.</p>
