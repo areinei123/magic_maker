@@ -10,9 +10,9 @@
       <%-end-%>
     </span>
   </p>
-  <p><%= image_tag(@card.image) %></p>
+  <!-- Image line should go here -->
   <p><%= @card.main_type %> <%= @card.sub_type unless @card.sub_type.empty? %></p>
-  <p><%= simpleformat(@card.rules_text) %></p>
+  <p><%= simple_format(@card.rules_text) %></p>
   <p><%= simple_format(@card.flavor_text) %></p>
   <% if @card.main_type.include?("Creature") %>
   <p><%= @card.power %>/<%= @card.toughness %></p>
